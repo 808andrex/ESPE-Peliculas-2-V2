@@ -3,7 +3,7 @@ package espe.movies.dao;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import espe.movies.modelo.Pelicula;
+import espe.movies.model.Pelicula;
 import espe.movies.db.ConexionMongo;
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
@@ -44,6 +44,6 @@ public class PeliculaDAO {
     }
 
     public void eliminarPorTitulo(String titulo){
-        collection.deleteOne(Filters.eq("titulo"+titulo));
+        collection.deleteOne(Filters.eq("titulo",titulo));
     }
 }

@@ -1,4 +1,4 @@
-package espe.movies.modelo;
+package espe.movies.model;
 
 public enum Genero {
     ACCION,

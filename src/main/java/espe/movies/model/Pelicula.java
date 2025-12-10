@@ -1,4 +1,4 @@
-package espe.movies.modelo;
+package espe.movies.model;
 
 public class Pelicula extends Contenido implements Alquilable {
     private boolean ganoOscar;

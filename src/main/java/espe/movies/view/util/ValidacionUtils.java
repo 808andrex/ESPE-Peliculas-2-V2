@@ -1,6 +1,6 @@
-package espe.movies.vista.util;
+package espe.movies.view.util;
 
-import espe.movies.modelo.Genero;
+import espe.movies.model.Genero;
 
 public class ValidacionUtils {
 

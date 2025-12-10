@@ -1,4 +1,4 @@
-package espe.movies.modelo;
+package espe.movies.model;
 
 public class Serie extends Contenido {
     private int numTemporadas;

@@ -1,17 +1,17 @@
-package espe.movies.controlador;
-
-import espe.movies.dao.PeliculaDAO;
-import espe.movies.modelo.Alquilable;
-import espe.movies.modelo.Contenido;
-import espe.movies.excepciones.RecursoNoEncontradoException;
-import espe.movies.modelo.Pelicula;
-
+package espe.movies.controller;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+
+import espe.movies.dao.PeliculaDAO;
+import espe.movies.excepciones.RecursoNoEncontradoException;
+import espe.movies.model.Alquilable;
+import espe.movies.model.Contenido;
+import espe.movies.model.Pelicula;
 
 public class PeliculaController {
     private String nombre;
@@ -170,5 +170,14 @@ public class PeliculaController {
         }catch(IOException e){
             System.out.println("❌ Error al guardar el JSON "+e.getMessage());
         }
+    }
+
+    public List<Pelicula> listarPeliculas(){
+        return peliculaDAO.listar();
+    }
+
+    public void eliminarPelicula(String titulo){
+        peliculaDAO.eliminarPorTitulo(titulo);
+        System.out.println("Se solicito eliminar: "+titulo);
     }
 }
