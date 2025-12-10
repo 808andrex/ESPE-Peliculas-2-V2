@@ -1,7 +1,5 @@
 package espe.movies.modelo;
 
-import espe.movies.modelo.Contenido.Contenido;
-
 import java.time.LocalDateTime;
 
 public class Usuario {

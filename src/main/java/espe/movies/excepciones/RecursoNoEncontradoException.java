@@ -1,4 +1,4 @@
-package espe.movies.exceptiones;
+package espe.movies.excepciones;
 
 public class RecursoNoEncontradoException extends Exception{
     public RecursoNoEncontradoException(String nombreRecurso){

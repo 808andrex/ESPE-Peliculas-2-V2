@@ -1,8 +1,10 @@
 package espe.movies.controlador;
 
+import espe.movies.dao.PeliculaDAO;
 import espe.movies.modelo.Alquilable;
 import espe.movies.modelo.Contenido;
-import espe.movies.exceptiones.RecursoNoEncontradoException;
+import espe.movies.excepciones.RecursoNoEncontradoException;
+import espe.movies.modelo.Pelicula;
 
 
 import java.io.FileWriter;
@@ -14,15 +16,21 @@ import java.util.Collections;
 public class PeliculaController {
     private String nombre;
     private ArrayList<Contenido> catalogo;
+    private PeliculaDAO peliculaDAO;
 
     public PeliculaController(String nombre){
         this.nombre = nombre;
         this.catalogo = new ArrayList<>();
+        this.peliculaDAO = new PeliculaDAO();
     }
 
     public void agregarContenido(Contenido video){
         this.catalogo.add(video);
-        System.out.println("✅ Se agrego "+video.getTitulo()+" al catalogo.");
+
+        if(video instanceof Pelicula){
+            peliculaDAO.guardar(((Pelicula) video));
+            System.out.println("✅ Guardado en Memoria y Base de Datos "+video.getTitulo());
+        }
     }
 
     public void eliminarContenido(String titulo){
