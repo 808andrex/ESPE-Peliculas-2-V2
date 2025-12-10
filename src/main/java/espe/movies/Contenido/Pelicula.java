@@ -8,6 +8,8 @@ public class Pelicula extends Contenido implements Alquilable {
         this.ganoOscar = ganoOscar;
     }
 
+    public Pelicula(){}
+
     @Override
     public String obtenerFichaTecnica() {
         String infoExtra = this.ganoOscar ? ", Ganadora del oscar":"";

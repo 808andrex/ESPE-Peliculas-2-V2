@@ -5,6 +5,7 @@ package espe.movies;
 import espe.movies.Contenido.Genero;
 import espe.movies.Contenido.Pelicula;
 import espe.movies.Contenido.Serie;
+import espe.movies.DAO.PeliculaDAO;
 import espe.movies.Plataforma.Plataforma;
 import espe.movies.Util.ScannerUtils;
 
@@ -21,6 +22,7 @@ public class Main {
     public static final int DEVOLVER_PELICULA  = 7;
     public static final int SALIR  = 8;
     private static Plataforma netflixESPE = new Plataforma(NOMBRE_PLATAFORMA);
+    private static PeliculaDAO netflixESPEMongo = new PeliculaDAO();
 
     public static void main(String[] args) {
         System.out.println(NOMBRE_PLATAFORMA +" v"+VERSION);
@@ -73,6 +75,7 @@ public class Main {
                 boolean ganoOscar = ScannerUtils.capturarBooleano("Gano un oscar? (True/false)");
                 Pelicula movies = new Pelicula(titulo, genero, duracion, calificacion, ganoOscar);
                 netflixESPE.agregarContenido(movies);
+                netflixESPEMongo.guardar(movies);
             }else{
                 int numTemporadas = ScannerUtils.capturarNumero("Num temporadas");
                 Serie serie = new Serie(titulo, genero, duracion, calificacion, numTemporadas);

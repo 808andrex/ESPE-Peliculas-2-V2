@@ -1,5 +1,7 @@
 package espe.movies.Contenido;
 
+import org.bson.types.ObjectId;
+
 import java.time.LocalDate;
 
 public abstract class Contenido implements Comparable<Contenido>{
@@ -14,6 +16,7 @@ public abstract class Contenido implements Comparable<Contenido>{
     private  double calificacion;
     private  boolean disponible;
     private  String descripcion;
+    private ObjectId id;
 
     public Contenido(String titulo, Genero genero, int duracion, double calificacion){
         this.titulo=titulo;
@@ -23,6 +26,8 @@ public abstract class Contenido implements Comparable<Contenido>{
         this.fechaEstreno = LocalDate.now();
         setCalificacion(calificacion);
     }
+
+    public Contenido(){}
 
     /** METODOS*/
     public void reproducir(){
@@ -75,6 +80,10 @@ public abstract class Contenido implements Comparable<Contenido>{
         return descripcion;
     }
 
+    public ObjectId getId() {
+        return id;
+    }
+
     /** SETTERS */
     public void setCalificacion(double calificacion) {
         if(calificacion >= CALIFICACION_MINIMA && calificacion <= CALIFICACION_MAXIMA){
@@ -86,5 +95,9 @@ public abstract class Contenido implements Comparable<Contenido>{
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
     }
 }

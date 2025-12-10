@@ -1,0 +1,90 @@
+[
+{
+"tipo": "Pelicula", 
+"titulo": "Inception",
+"genero": "CIENCIA_FICCION", 
+"duration": 148,
+"calificacion": 4.9,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Titanic",
+"genero": "DRAMA", 
+"duration": 195,
+"calificacion": 4.6,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "John Wick",
+"genero": "ACCION", 
+"duration": 101,
+"calificacion": 4.2,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "El Conjuro",
+"genero": "TERROR", 
+"duration": 112,
+"calificacion": 3.0,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Coco",
+"genero": "COMEDIA", 
+"duration": 105,
+"calificacion": 4.7,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Interstellar",
+"genero": "CIENCIA_FICCION", 
+"duration": 169,
+"calificacion": 5.0,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Joker",
+"genero": "DRAMA", 
+"duration": 122,
+"calificacion": 4.3,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Toy Story",
+"genero": "COMEDIA", 
+"duration": 81,
+"calificacion": 4.5,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Shrek",
+"genero": "COMEDIA", 
+"duration": 90,
+"calificacion": 4.0,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Avengers: Endgame",
+"genero": "ACCION", 
+"duration": 181,
+"calificacion": 3.9,
+"Gano Oscar": true
+},
+{
+"tipo": "Pelicula", 
+"titulo": "Inception",
+"genero": "DRAMA", 
+"duration": 190,
+"calificacion": 4.9,
+"Gano Oscar": true
+}
+]

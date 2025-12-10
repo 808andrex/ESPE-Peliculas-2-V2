@@ -14,6 +14,8 @@ public class Serie extends Contenido {
         return fichaPadre +" | Temporadas: "+this.numTemporadas;
     }
 
+    public Serie(){}
+
     @Override
     public String toJSON(){
         return "{\n"+
