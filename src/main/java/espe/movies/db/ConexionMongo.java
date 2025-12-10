@@ -1,10 +1,10 @@
-package espe.movies.DB;
+package espe.movies.db;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
-public class MongoConnection {
+public class ConexionMongo {
     private static final String CONNECTION_STRING = "mongodb+srv://kespe:mongo1234@cluster0.yh8p2fm.mongodb.net/?appName=Cluster0";
     private static final String DATABASE_NAME = "espe_movies";
 

@@ -1,8 +1,8 @@
-package espe.movies.Plataforma;
+package espe.movies.controlador;
 
-import espe.movies.Contenido.Alquilable;
-import espe.movies.Contenido.Contenido;
-import espe.movies.Excepciones.RecursoNoEncontradoException;
+import espe.movies.modelo.Alquilable;
+import espe.movies.modelo.Contenido;
+import espe.movies.exceptiones.RecursoNoEncontradoException;
 
 
 import java.io.FileWriter;
@@ -11,11 +11,11 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Plataforma {
+public class PeliculaController {
     private String nombre;
     private ArrayList<Contenido> catalogo;
 
-    public Plataforma(String nombre){
+    public PeliculaController(String nombre){
         this.nombre = nombre;
         this.catalogo = new ArrayList<>();
     }

@@ -1,6 +1,6 @@
-package espe.movies.Plataforma;
+package espe.movies.modelo;
 
-import espe.movies.Contenido.Contenido;
+import espe.movies.modelo.Contenido.Contenido;
 
 import java.time.LocalDateTime;
 

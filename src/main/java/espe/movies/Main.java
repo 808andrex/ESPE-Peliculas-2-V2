@@ -2,12 +2,12 @@ package espe.movies;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-import espe.movies.Contenido.Genero;
-import espe.movies.Contenido.Pelicula;
-import espe.movies.Contenido.Serie;
-import espe.movies.DAO.PeliculaDAO;
-import espe.movies.Plataforma.Plataforma;
-import espe.movies.Util.ScannerUtils;
+import espe.movies.modelo.Contenido.Genero;
+import espe.movies.modelo.Contenido.Pelicula;
+import espe.movies.modelo.Contenido.Serie;
+import espe.movies.dao.PeliculaDAO;
+import espe.movies.controlador.PeliculaController;
+import espe.movies.vista.Util.ScannerUtils;
 
 
 public class Main {
@@ -21,7 +21,7 @@ public class Main {
     public static final int ALQUILAR_PELICULA  = 6;
     public static final int DEVOLVER_PELICULA  = 7;
     public static final int SALIR  = 8;
-    private static Plataforma netflixESPE = new Plataforma(NOMBRE_PLATAFORMA);
+    private static PeliculaController netflixESPE = new PeliculaController(NOMBRE_PLATAFORMA);
     private static PeliculaDAO netflixESPEMongo = new PeliculaDAO();
 
     public static void main(String[] args) {
@@ -127,7 +127,7 @@ public class Main {
             otroEliminar = ScannerUtils.capturarChar("¿Quieres eliminar otra titulo del catalogo?(s/n)");
         }while (otroEliminar == 's'|| otroEliminar == 'S' || otroEliminar == 'y'|| otroEliminar == 'Y');
     }
-    public static void cargarPeliculas(Plataforma plataforma) {
+    public static void cargarPeliculas(PeliculaController plataforma) {
         plataforma.agregarContenido(new Pelicula("Inception", Genero.CIENCIA_FICCION, 148, 4.9, true));
         plataforma.agregarContenido(new Pelicula("Titanic", Genero.DRAMA, 195, 4.6, true));
         plataforma.agregarContenido(new Pelicula("John Wick", Genero.ACCION, 101, 4.2, true));

@@ -1,4 +1,4 @@
-package espe.movies.Contenido;
+package espe.movies.modelo;
 
 public interface Alquilable {
     void alquilar();

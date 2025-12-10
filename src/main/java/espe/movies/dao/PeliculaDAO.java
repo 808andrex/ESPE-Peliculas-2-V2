@@ -1,10 +1,10 @@
-package espe.movies.DAO;
+package espe.movies.dao;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import espe.movies.Contenido.Pelicula;
-import espe.movies.DB.MongoConnection;
+import espe.movies.modelo.Contenido.Pelicula;
+import espe.movies.db.ConexionMongo;
 import org.bson.codecs.configuration.CodecProvider;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
@@ -23,7 +23,7 @@ public class PeliculaDAO {
         CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true).build();
         CodecRegistry pojoCodecRegistry = fromRegistries(getDefaultCodecRegistry(),fromProviders(pojoCodecProvider));
 
-        MongoDatabase database = MongoConnection.getDatabase().withCodecRegistry(pojoCodecRegistry);
+        MongoDatabase database = ConexionMongo.getDatabase().withCodecRegistry(pojoCodecRegistry);
 
         this.collection = database.getCollection("peliculas",Pelicula.class);
     }

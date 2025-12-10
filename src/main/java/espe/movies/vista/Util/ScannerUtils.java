@@ -1,7 +1,7 @@
-package espe.movies.Util;
+package espe.movies.vista.Util;
 
 
-import espe.movies.Contenido.Genero;
+import espe.movies.modelo.Contenido.Genero;
 
 import java.util.Scanner;
 
